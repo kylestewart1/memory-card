@@ -1,0 +1,27 @@
+.header {
+  padding: 5px;
+  width: 100%;
+  font-family: "saiyan-sans";
+  display: grid;
+  grid-template-columns: 8fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.header > h1 {
+  font-size: 3rem;
+  grid-row: 1 / 2;
+}
+
+.header > p {
+  font-size: 1.5rem;
+  grid-row: 2 / -1;
+}
+
+.header > h1, .header > p {
+  grid-column: 1 / 2;
+}
+
+.header > .score {
+  font-size: 1.5rem;
+  grid-column: 2 / -1;
+}
