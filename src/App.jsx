@@ -10,11 +10,31 @@ function App() {
   const [cards, setCards] = useState(characterIDs.map(id => {
     return {id, clicked: false};
   }));
+  const [highestScore, setHighestScore] = useState(0);
+
+  const currentScore = cards.filter(card => card.clicked).length;
+
+  function handleClick(id) {
+    let clickedCard = {...cards.find(card => card.id === id)};
+    if (!clickedCard.clicked) {
+      clickedCard.clicked = true;
+      setCards([
+        ...cards.filter(card => card.id !== id),
+        clickedCard
+      ]);
+    } else {
+      const currentRecord = highestScore;
+      setHighestScore(Math.max(currentRecord, currentScore));
+      setCards(cards.map(card => {
+        return {...card, clicked: false};
+      }));
+    }
+  }
 
   return (
     <>
-      <Header />
-      <CardsContainer cards={cards}/>
+      <Header currentScore={currentScore} highestScore={highestScore}/>
+      <CardsContainer cards={cards} handleClick={handleClick}/>
     </>
   )
 }

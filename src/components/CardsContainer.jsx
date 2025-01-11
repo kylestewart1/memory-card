@@ -2,13 +2,8 @@ import Card from "./Card";
 import "../styles/CardsContainer.css"
 
 
-export default function CardsContainer({ cards }) {
+export default function CardsContainer({ cards, handleClick }) {
   
-
-  function handleClick() {
-
-  }
-
   const shuffled = [...cards].sort(() => Math.random() - 0.5);
   const display = shuffled.map(card => {
     return (

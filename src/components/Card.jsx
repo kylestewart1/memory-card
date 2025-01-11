@@ -18,7 +18,7 @@ export default function Card({ id, onClick }) {
   })
 
   return (
-    <button className="card" onClick={onClick}>
+    <button className="card" onClick={() => onClick(id)}>
       <img src={image}/>
       <h2>{characterName}</h2>
     </button>
