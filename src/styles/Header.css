@@ -1,27 +1,50 @@
 .header {
-  padding: 5px;
+  padding: 20px;
   width: 100%;
   font-family: "saiyan-sans";
   display: grid;
-  grid-template-columns: 8fr 1fr;
+  grid-template-columns: 4fr 1fr;
   grid-template-rows: 1fr 1fr;
 }
 
 .header > h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   grid-row: 1 / 2;
+  -webkit-text-stroke: 3px black;
 }
 
+.yellow {
+  color: rgb(255, 238, 0);
+}
+
+.red {
+  color: rgb(255, 51, 0);
+}
+
+.left {
+  font-family: "saiyan-sans-left-oblique";
+}
+
+.right {
+  font-family: "saiyan-sans-right-oblique";
+}
+
+.dragon-ball-o {
+  color: orange;
+}
 .header > p {
-  font-size: 1.5rem;
+  color: orange;
+  font-size: 2rem;
   grid-row: 2 / -1;
+  -webkit-text-stroke: 1px black;
 }
 
 .header > h1, .header > p {
   grid-column: 1 / 2;
 }
-
-.header > .score {
-  font-size: 1.5rem;
+.score {
+  color: orange;
+  -webkit-text-stroke: 1px black;
+  font-size: 2rem;
   grid-column: 2 / -1;
 }

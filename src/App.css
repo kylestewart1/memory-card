@@ -1,4 +1,5 @@
 #root {
+  background: url('../assets/images/namek.png');
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,4 +9,16 @@
   font-family: "saiyan-sans";
   src: local("Saiyan-Sans"),
   url("../assets/fonts/Saiyan-Sans.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "saiyan-sans-left-oblique";
+  src: local("Saiyan-Sans Left Oblique"),
+  url("../assets/fonts/Saiyan-Sans\ Left\ Oblique.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "saiyan-sans-right-oblique";
+  src: local("Saiyan-Sans Right Oblique"),
+  url("../assets/fonts/Saiyan-Sans\ Right\ Oblique.ttf") format("truetype");
 }
